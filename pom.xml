@@ -7,5 +7,6 @@
   <modules>
   	<module>testfield-utils</module>
   	<module>testfield-algorithm</module>
+  	<module>testfield-redis</module>
   </modules>
 </project>
