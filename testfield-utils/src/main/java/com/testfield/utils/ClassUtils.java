@@ -1,6 +1,5 @@
 package com.testfield.utils;
 
-import java.io.Serializable;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -9,7 +8,7 @@ import java.util.Map;
 
 public class ClassUtils {
 
-    public static <V, T extends Serializable> V convert(T source, Class<V> targetClass) throws Exception {
+    public static <V, T> V convert(T source, Class<V> targetClass) throws Exception {
 
         if (source == null)
             throw new NullPointerException("ClassUtils.convert source is null error!");
@@ -23,7 +22,7 @@ public class ClassUtils {
         }
         Field.setAccessible(targetFields, true);
 
-        Class<? extends Serializable> sourceClass = source.getClass();
+        Class<? extends Object> sourceClass = source.getClass();
         Field[] sourceFields = sourceClass.getDeclaredFields();
         if (sourceFields == null || sourceFields.length == 0) {
             return returnObj;

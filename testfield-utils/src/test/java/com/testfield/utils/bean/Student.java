@@ -1,9 +1,6 @@
 package com.testfield.utils.bean;
 
-import java.io.Serializable;
-
-public class Student implements Serializable {
-    private static final long serialVersionUID = -3691912242230800809L;
+public class Student {
     private Integer id;
     private String name;
     private Integer age;
